@@ -1,2 +1,2 @@
 ﻿{% for metatag in metatags %}
-    <meta name="{{metatag.name}}" content="{{metatag.content}}" />{% endfor %}
+    <meta {{metatag.type.attribute}}="{{metatag.type.value}}" content="{{metatag.content}}" {% if metatag.scheme %}scheme="metatag.scheme" {% endif %}/> {% endfor %}
