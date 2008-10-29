@@ -8,7 +8,6 @@ from django.contrib import admin
 ATTRIBUTE_CHOICES = (
     ('name','name'),
     ('http-equiv','http-equiv'),
-    ('scheme','scheme'),
 )
 
 class MetatagType(models.Model):
