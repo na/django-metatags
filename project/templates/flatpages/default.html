@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block extrahead %}
+{% load metatag %} 
+{% get_metatags flatpage %}
+{% endblock %}
+{% block content %}
+<img src="{{ flatpage.pageimage.image.get_pageimage_url }}" alt="{{ flatpage.pageimage.image.title}}"/>
+{{ flatpage.content }}
+{% endblock %}

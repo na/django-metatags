@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+ 	<h1>Welcome To The Show</h1>
+    	<p><img src="{{media_url}}imgs/demo-image.jpg" alt="Image Name">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Etiam arcu. Suspendisse potenti. Nulla urna purus, pulvinar nec, adipiscing ut, placerat id, mi. <em>Vivamus faucibus lobortis odio.</em> Morbi sodales fringilla urna. In interdum, nisl euismod eleifend egestas, dui leo vestibulum erat, non <a href="http://apple.com" title="Apple Computer Website">Apple Website</a> turpis leo ut ante. In condimentum adipiscing ipsum. Etiam eros. Nullam lectus arcu, pellentesque ac, semper ut, vestibulum vitae, nulla. Maecenas risus leo, tincidunt in, eleifend et, sagittis a, nunc.</p>
+
+    	<blockquote><p>Morbi nec mi quis dui ultricies gravida. Vivamus tincidunt porta diam. Vivamus turpis. Sed risus libero, congue in, placerat quis, mollis id, erat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent ac eros vitae lorem porttitor dictum. Nam luctus mauris ut ipsum.</p></blockquote>
+
+    	<p>Ut porta, sapien vitae euismod tempor, magna felis fermentum justo, nec dignissim pede elit sed odio. Proin sit amet tellus. Vestibulum dapibus, ligula tincidunt blandit lacinia, risus turpis cursus magna, ut accumsan ipsum magna sit amet odio. Fusce at quam. Integer id elit. Sed eleifend dui ac orci. <strong>Praesent imperdiet vulputate pede.</strong> Praesent pulvinar sodales lectus. Donec mi libero, dictum ut, lacinia eu, rhoncus eget, dolor. <a href="mypdf.pdf" title="My PDF">Donec quis justo.</a> Sed nisl risus, pulvinar nec, consequat ut, volutpat quis, mauris. Praesent sit amet pede in ante tincidunt bibendum.</p>
+
+    <ul>			
+    <li>Donec orci eros, dictum accumsan, eleifend a, laoreet eget, mauris.</li>
+    <li>Donec lorem ante, <a href="/about/" title="About">aliquam vitae</a>, euismod ut, tempor eget, odio.</li>
+    <li>Fusce ornare justo ut sem.</li>
+    <li>In rutrum, urna ut tempus euismod, pede velit hendrerit tellus, non condimentum risus diam nec felis.</li>
+    </ul>
+
+    <img src="{{media_url}}imgs/demo-image-large.jpg" alt="Image Name" class="featured-image">
+
+    	<p>Nam cursus commodo neque. Nam nisi. Ut vehicula orci ac risus. Donec lobortis. Aliquam at orci. Nulla molestie. Class aptent taciti sociosqu ad <a href="mydoc.doc" title="My Doc">litora torquent</a> per conubia nostra, per inceptos hymenaeos. Praesent mollis convallis nunc. Nullam eu erat. Praesent vel nibh vitae nunc rhoncus vehicula. Ut eros augue, tristique a, pulvinar eu, viverra eleifend, est. Quisque tortor. Nam ut neque. Donec sed elit eu justo blandit tincidunt. Vestibulum fermentum tellus sit amet leo. In lorem augue, auctor eu, lacinia ut, accumsan vitae, orci. Etiam felis nisi, fermentum eget, bibendum nec, viverra at, justo.</p>
+
+    <ol>
+    <li>Donec orci eros, dictum accumsan, eleifend a, laoreet eget, mauris.</li>
+    <li>Donec lorem ante, aliquam vitae, euismod ut, tempor eget, odio.</li>
+    <li>Fusce ornare justo ut sem.</li>
+    <li>In rutrum, urna ut tempus euismod, pede velit hendrerit tellus, non condimentum risus diam nec felis.</li>
+    </ol>
+{% endblock %}
+
+{% block sidebar %}
+    {% include "includes/default_sidebar.html" %}
+{% endblock %}

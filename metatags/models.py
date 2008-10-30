@@ -23,16 +23,24 @@ class Metatag(models.Model):
     type        = models.ForeignKey(MetatagType)
     content     = models.TextField(_('content'), help_text = _('Content of the metatag.'))
     scheme      = models.CharField(_('scheme'), max_length=64, blank=True, help_text = _('Scheme attribute'))
+    
     # Content-object field
     content_type   = models.ForeignKey(ContentType,
             related_name="content_type_set_for_%(class)s")
     object_id      = models.PositiveIntegerField(_('object ID'))
     content_object = generic.GenericForeignKey(ct_field="content_type", fk_field="object_id")
 
+    class meta():
+        unique_together = ("type","content_object")
+        verbose_name = _('Html metatag')
+        verbose_name_plural = _('Html metatags')
+
     objects = MetaTagManager()
+    
+    def _content_object(self):
+        return "%s" % self.content_object
+    _content_object.short_description = "Content object"
 
     def __unicode__(self):
         return "%s: %s" % (self.type, self.content_object)
-
-admin.site.register(MetatagType)
-admin.site.register(Metatag)
+    
