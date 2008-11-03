@@ -14,6 +14,9 @@ class MetatagType(models.Model):
     #metatag attribute list
     attribute   = models.CharField(_('attribute'),max_length=64,choices=ATTRIBUTE_CHOICES)
     value       = models.CharField(_('value'),max_length=128)
+    
+    class Meta:
+        ordering = ["value"]
 
     def __unicode__(self):
         return self.value
