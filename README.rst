@@ -12,11 +12,3 @@ Installation
 
 Now log in to your admin site and create some metatags. Check out the included project for an 
 example of integrating metatags with flatpages. 
-
-If you don't want to use metatags but don't want to include them in your admin site just unregister
-the admin somewhere in your project:
-    ``from metatags.models import Metatags, MetatagTypes
-      from django.contrib import admin
-      
-      admin.site.unregister(Metatags)
-      admin.site.unregister(MetatagTypes)``
